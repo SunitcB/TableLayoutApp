@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/codeNameTxt"
+        android:layout_width="383dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Enter Android Code Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/versionTxt" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Table Layout App"
+        app:titleTextColor="#FDFDFD" />
+
+    <TableLayout
+        android:id="@+id/androidTableLayout"
+        android:layout_width="405dp"
+        android:layout_height="427dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TableRow
+            android:id="@+id/androidTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="?attr/actionModeSplitBackground"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/versionTxtView"
+                android:layout_width="217dp"
+                android:layout_height="wrap_content"
+                android:text="Version"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/codeNameTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Code Name"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </TableRow>
+
+<!--        <TableRow>-->
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="Column 1"-->
+<!--                android:gravity="center"-->
+<!--                android:background="#CCCCCC"-->
+<!--                android:padding="8dp" />-->
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="Column 2"-->
+<!--                android:gravity="center"-->
+<!--                android:background="#CCCCCC"-->
+<!--                android:padding="8dp" />-->
+<!--        </TableRow>-->
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/versionTxt"
+        android:layout_width="383dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Enter Android Version"
+        android:inputType="text"
+        android:onClick="onClickHandler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="381dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="15dp"
+        android:text="ADD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codeNameTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
